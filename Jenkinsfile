@@ -5,7 +5,7 @@ node{
    stage('Compile-Package'){
       // Get maven home path
       def mvnHome =  tool name: 'm2', type: 'maven'   
-      sh "${mvnHome}/usr/share/maven/bin/mvn package"
+      sh "${mvnHome}/bin/mvn package"
          }
    stage('Email Notification'){
       mail bcc: '', body: '''Hi Welcome to jenkins email alerts
